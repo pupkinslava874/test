@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twallpaper@latest/dist/style.css">
+    <style>
+        body {
+            background-color: #333; /* Dark background */
+        }
+        .btn-custom {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 576px) {
+            .btn-custom {
+                width: auto;
+                margin-bottom: 0;
+            }
+            .btn-custom + .btn-custom {
+                margin-left: 15px;
+            }
+        }
+        .tw-wrap {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .card-custom {
+            background-color: #fff; /* Light background for the card */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="tw-wrap"></div>
+    <div class="container text-center mt-5">
+        <div class="card card-custom mx-auto">
+            <h1>Welcome to Our Cannabi$ Club</h1>
+            <p class="lead">Connect with us on Telegram and WhatsApp</p>
+            <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center">
+                <a href="https://t.me/Rick_Bross" class="btn btn-primary btn-lg btn-custom">
+                    <i class="fab fa-telegram-plane"></i> Join our Telegram Chat
+                </a>
+                <a href="https://wa.me/c/972509548168" class="btn btn-success btn-lg btn-custom">
+                    <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/twallpaper@latest/dist/index.umd.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector('.tw-wrap');
+            const options = {
+                colors: ['#7988cf', '#14cac5', '#7e902d', '#1e0d8c'],
+                animate: true,
+                fps: 30,
+                tails: 90,
+                scrollAnimate: true,
+                pattern: {
+                    mask: true,
+                    size: '420px',
+                    opacity: 0.9,
+                    image: 'https://twallpaper.js.org/patterns/space.svg'
+                }
+            };
+            const wallpaper = new TWallpaper.TWallpaper(container, options);
+            wallpaper.init();
+        });
+    </script>
+</body>
+</html>
